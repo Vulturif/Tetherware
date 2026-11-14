@@ -69,18 +69,6 @@ folder you pick.
   and recent error details only if you tick that box. It sends nothing from
   your logs, and only when you press send.
 
-## Running from source
-
-```
-python -m venv .venv
-.venv\Scripts\pip install -r requirements.txt
-.venv\Scripts\python main.py
-```
-
-Needs Python 3.11+ on Windows. Tests: `.venv\Scripts\python -m unittest
-discover -s tests`. The screenshots above are rendered from made-up logs by
-`tools/screenshots.py`, and the icon is baked by `tools/make_icon.py`.
-
 ## Part of the Vulturif family
 
 Tetherware shares the [vulturif-kit](https://github.com/Vulturif/vulturif-kit)
