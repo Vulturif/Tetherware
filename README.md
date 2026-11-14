@@ -34,15 +34,21 @@ someone starts flooding you.
 
 ## Install and update
 
-Download `Tetherware.exe` from [vulturif.com](https://vulturif.com/p/tetherware/)
+Download Tetherware from [vulturif.com](https://vulturif.com/p/tetherware/)
 or from this repo's [Releases](https://github.com/Vulturif/Tetherware/releases).
-It is a single file with no installer: put it anywhere and run it. Windows
-10/11.
+Each one is a single file with no installer: put it anywhere and run it.
 
-Tetherware can check for a new version when it starts (**Help → Check for
-updates at startup**, on by default), or whenever you choose **Help → Check
-for updates now**. Every update is signed, and Tetherware checks the signature
-before it replaces itself. You can skip a version you don't want.
+- **Windows 10/11:** `Tetherware.exe`.
+- **Linux (x86_64):** `Tetherware-x86_64.AppImage`. Make it executable
+  (`chmod +x Tetherware-x86_64.AppImage`) and run it. It needs glibc 2.35 or
+  newer: Ubuntu 22.04+, Debian 12+, Fedora 35+.
+
+On Windows, Tetherware can check for a new version when it starts (**Help →
+Check for updates at startup**, on by default), or whenever you choose **Help
+→ Check for updates now**. Every update is signed, and Tetherware checks the
+signature before it replaces itself. You can skip a version you don't want.
+On Linux it doesn't update itself yet: download the new AppImage and replace
+the old one.
 
 ## Where the logs are
 
@@ -52,7 +58,7 @@ Tetherware works with both ways the CtrlEm receiver client can log:
 - **One file** (`commands.log`), if the client is set to a single log.
 
 Tetherware first looks for a `CtrlEm\logs` folder in your AppData and home
-folders. If your receiver client writes its logs somewhere else, use
+folders (on Linux: `~/.config`, `~/.local/share` and home). If your receiver client writes its logs somewhere else, use
 **Change folder…** at the bottom of the window. Tetherware remembers the
 folder you pick.
 
@@ -65,8 +71,8 @@ folder you pick.
   say yes, it counts which features get used (for example "watcher started"),
   never anything from your logs. Turn it off any time under **Help → Usage
   statistics**.
-- **Help → Send feedback…** sends what you type, the app and Windows version,
-  and recent error details only if you tick that box. It sends nothing from
+- **Help → Send feedback…** sends what you type, the app and operating-system
+  version, and recent error details only if you tick that box. It sends nothing from
   your logs, and only when you press send.
 
 ## Part of the Vulturif family
