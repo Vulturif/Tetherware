@@ -27,8 +27,23 @@ someone starts flooding you.
   machine.
 - **Per-controller detail.** Click a sender to see their timeline, what they
   send, their channels, and when you first and last heard from them.
+- **Feed.** Everything you were sent as a timeline, newest on top, with the
+  pictures inline: "ksm6 sent you a pic · 22:19" and the picture under it.
+  Several pictures from one person in a row are grouped into one entry
+  ("Mira sent you 5 pics") with a gallery under it. Click a picture to see it
+  full size (GIFs play) and step through the rest of the group. Pictures
+  the CtrlEm client saved itself (its `popups` and `wallpapers` folders, next
+  to `logs`) are shown from disk. Videos and sounds play right in the app:
+  a sound tile is a small player (play/pause, seek, length), a video tile
+  shows its first frame and length and plays in the viewer. Both use the
+  client's saved copy, or stream the link if it kept none. Type a sender's name or
+  code (it autocompletes), tick which kinds of command to show, pick a period.
+  New commands appear live.
 - **Message search.** Search everything you were sent, decoded into readable
-  text and clean links. Filter by sender, command and date.
+  text and clean links. Filter by sender (autocompleting), any mix of
+  command types, and date.
+
+![The Feed: received pictures inline, newest first](screenshots/feed.png)
 
 ![Message search across every log](screenshots/messages.png)
 
@@ -67,6 +82,15 @@ folder you pick.
 - Tetherware only **reads** the receiver client's log files. It never changes
   them and never contacts CtrlEm.
 - Your logs, sender names and messages never leave your machine.
+- **The Feed shows the CtrlEm client's own saved copies first** (its
+  `popups` and `wallpapers` folders). Only a picture it didn't keep is
+  **downloaded** from wherever it's hosted (usually Discord's CDN). A video
+  or sound without a saved copy is only streamed when you press play. That site sees your IP address, as
+  it would if you opened the link. Only pictures on screen are fetched, and
+  they're kept in memory only: nothing is saved to disk. Turn it off under
+  **View → Show pictures in feed** (or the switch above the Feed): picture
+  previews are hidden and nothing is loaded; click a row to show just that
+  one.
 - **Usage stats are opt-in and off by default.** Tetherware asks once. If you
   say yes, it counts which features get used (for example "watcher started"),
   never anything from your logs. Turn it off any time under **Help → Usage
