@@ -81,6 +81,26 @@ folders (on Linux: `~/.config`, `~/.local/share` and home). If your receiver cli
 **Change folder…** at the bottom of the window. Tetherware remembers the
 folder you pick.
 
+### Reading a log over HTTP
+
+When the receiver runs on another machine (a VM, say) you can read its
+`commands.log` across the network instead of from a local folder. On that
+machine, serve the log's folder with a plain HTTP server:
+
+```
+cd <the CtrlEm logs folder>
+python -m http.server 8000
+```
+
+Then in Tetherware choose **File → Use remote log URL…** and point it at the
+file, e.g. `http://192.168.1.50:8000/commands.log`. It tails the file the same
+way it tails a local one — incrementally, with live updates and flood toasts.
+
+> ⚠ `python -m http.server` is **unencrypted and unauthenticated** — anyone who
+> can reach that address can read the commands too. Use it only on a network
+> you trust, or tunnel it over SSH. (Pictures aren't fetched from the remote
+> machine; the Feed downloads them from where they're hosted, as usual.)
+
 ## Privacy
 
 - Tetherware only **reads** the receiver client's log files. It never changes
