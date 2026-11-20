@@ -42,6 +42,10 @@ someone starts flooding you.
 - **Message search.** Search everything you were sent, decoded into readable
   text and clean links. Filter by sender (autocompleting), any mix of
   command types, and date.
+- **Themes.** View → Theme switches the look on the spot (the shared Vulturif
+  palettes, same as the sibling apps): Night City (the
+  default), Velvet Room, Leather & Steel, Amber Terminal, Latex, and a light
+  one, Brass & Bone. Your choice is remembered.
 
 ![The Feed: received pictures inline, newest first](screenshots/feed.png)
 
