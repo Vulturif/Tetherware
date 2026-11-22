@@ -62,12 +62,11 @@ Each one is a single file with no installer: put it anywhere and run it.
   (`chmod +x Tetherware-x86_64.AppImage`) and run it. It needs glibc 2.35 or
   newer: Ubuntu 22.04+, Debian 12+, Fedora 35+.
 
-On Windows, Tetherware can check for a new version when it starts (**Help →
-Check for updates at startup**, on by default), or whenever you choose **Help
-→ Check for updates now**. Every update is signed, and Tetherware checks the
-signature before it replaces itself. You can skip a version you don't want.
-On Linux it doesn't update itself yet: download the new AppImage and replace
-the old one.
+On both Windows and Linux, Tetherware can check for a new version when it
+starts (**Help → Check for updates at startup**, on by default), or whenever
+you choose **Help → Check for updates now**. Every update is signed, and
+Tetherware checks the signature before it replaces itself (the AppImage swaps
+itself in place). You can skip a version you don't want.
 
 ## Where the logs are
 
